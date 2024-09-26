@@ -15,7 +15,7 @@ public class Reservation {
     @Column(name = "ROOM_ID")
     private long roomId;
     @Column(name = "GUEST_ID")
-    private long questId;
+    private long guestId;
     @Column(name = "RES_DATE")
     private Date reservationDate;
 
@@ -35,12 +35,12 @@ public class Reservation {
         this.roomId = roomId;
     }
 
-    public long getQuestId() {
-        return questId;
+    public long getGuestId() {
+        return guestId;
     }
 
-    public void setQuestId(long questId) {
-        this.questId = questId;
+    public void setGuestId(long guestId) {
+        this.guestId = guestId;
     }
 
     public Date getReservationDate() {
@@ -56,8 +56,10 @@ public class Reservation {
         return "Reservation{" +
                 "reservationId=" + reservationId +
                 ", roomId=" + roomId +
-                ", questId=" + questId +
+                ", questId=" + guestId +
                 ", reservationDate=" + reservationDate +
                 '}';
     }
+
+
 }
